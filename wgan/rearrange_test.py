@@ -1,12 +1,13 @@
 import numpy as np
 import scipy.misc
-import cPickle
+import cloudpickle
+import pickle
 
 result_dir = "./result/samples/lsun_64_wgan_RMS/"
 test_offset = 0
 
 with open(result_dir+'test_fixed_prob_{}.pkl'.format(test_offset),'r') as infile:
-    test_image_idxs, test_images, test_z_batches, save_result_g_loss, save_result_d_loss = cPickle.load(infile)
+    test_image_idxs, test_images, test_z_batches, save_result_g_loss, save_result_d_loss = pickle.loads(infile)
 
 prob_image_pairs = [[] for i in range(64)]
 

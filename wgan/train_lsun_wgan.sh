@@ -1,1 +1,2 @@
-python mian_wgan.py --is_train=True --dataset="lsun_64" --dir_tag="wgan"
+#!/usr/bin/env bash
+python mian_wgan.py --is_train=True --dataset="colorImage" --dir_tag="wgan"
